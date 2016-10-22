@@ -3,6 +3,8 @@
 namespace Yuido;
 
 use ZF\Rest\AbstractResourceListener;
+use Doctrine\Common\Annotations\AnnotationRegistry;  
+
 
 class ResourceListener extends AbstractResourceListener{
     protected $doctrine;
@@ -13,6 +15,9 @@ class ResourceListener extends AbstractResourceListener{
         $kernel = new \AppKernel('prod', true);
         $kernel->loadClassCache();
         $kernel->boot();
+        
+        AnnotationRegistry::registerFile(__DIR__. "/../../vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php");
+        
         $this->doctrine = $kernel->getContainer()->get('doctrine')->getManager();
     }
 }

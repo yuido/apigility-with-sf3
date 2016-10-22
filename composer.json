@@ -57,12 +57,12 @@
     "autoload": {
         "psr-4": {
             "Application\\": "module/Application/src/",
-            "": "/Users/juanda/Apps/apigility-sf/sf/src/",
+            "": "../sf/src/",
             "Yuido\\": "src/Yuido"
         },
         "classmap": [
-            "/Users/juanda/Apps/apigility-sf/sf/app/AppKernel.php",
-            "/Users/juanda/Apps/apigility-sf/sf/app/AppCache.php"
+            "../sf/app/AppKernel.php",
+            "../sf/app/AppCache.php"
         ]
     },
     "autoload-dev": {
