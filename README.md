@@ -7,19 +7,16 @@ to use Symfony3 framework to add the required operation functionality.
 
 # How to integrate both frameworks
 
-Clone this project:
+Clone this project and deploy a Sf3 project:
 
     git clone https://github.com/yuido/apigility-with-sf3
+    symfony new sf
 
 Install vendors:
 
     cd apigility-with-sf3
     composer.phar install
-
-Deploy a Sf3 project:
-
-    cd ..
-    symfony new sf
+    
 
 Important: the Symfony3 project mush be deployed at the same level that 
 apigility-with-sf3 directory and must be named ``sf``.

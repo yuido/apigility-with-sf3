@@ -24,6 +24,5 @@ return [
     'ZF\\Rest',
     'ZF\\Rpc',
     'ZF\\Versioning',
-    'Application',
-    'Biblioteca',
+    'Application'
 ];
