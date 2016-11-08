@@ -46,7 +46,7 @@ First add the following array to ``module/Library/config/module.config.php``:
     'metadata_map' => [
         ....
 
-        \Library\Entity\Book::class => [
+        \AppBundle\Entity\Book::class => [
             'identifier_name' => 'id',
             'route_name' => 'library.rest.book',
             'hydrator' => 'ClassMethods',

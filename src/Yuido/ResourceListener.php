@@ -16,8 +16,9 @@ class ResourceListener extends AbstractResourceListener{
         $kernel->loadClassCache();
         $kernel->boot();
         
+        $loader = require __DIR__ . '/../../vendor/autoload.php';
         AnnotationRegistry::registerFile(__DIR__. "/../../vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/Driver/DoctrineAnnotations.php");
-        
+        AnnotationRegistry::registerLoader([$loader, 'loadClass']);
         $this->doctrine = $kernel->getContainer()->get('doctrine')->getManager();
     }
 }
